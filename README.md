@@ -1,33 +1,30 @@
-# Desafio 01 - ReactJS
-<a href="https://github.com/rocketseat-education/ignite-template-reactjs-conceitos-do-react">Template da aplicação</a>
+# Desafio 02 - ReactJS
+<a href="https://github.com/rocketseat-education/ignite-template-componentizando-a-aplicacao">Template da aplicação</a>
 
-### 💻 Sobre o desafio:
+# 💻 Sobre o desafio
 
-Nesse desafio, você deverá criar uma aplicação para treinar o que aprendeu até agora no ReactJS
+Nesse desafio, você deverá criar uma aplicação para treinar o que aprendeu até agora no ReactJS
 
-Essa será uma aplicação onde o seu principal objetivo é uma pequena aplicação de atividades a fazer, para treinar um pouco mais sobre manipulação do estado no React.
+Essa será uma aplicação onde o seu principal objetivo é refatorar uma página para listagem de filmes de acordo com gênero. 
 
--   Adicionar uma nova tarefa
--   Remover uma tarefa
--   Marcar e desmarcar uma tarefa como concluída
+A aplicação já está totalmente funcional mas grande parte do seu código está diretamente no arquivo `App.tsx`. Para resolver isso da melhor forma, é necessário dividir a aplicação em **pelo menos** duas partes principais: sidebar e o conteúdo principal que possui o header e a listagem de filmes.
+
+- A aplicação possui apenas uma funcionalidade principal que é a listagem de filmes;
+- Na sidebar é possível selecionar qual categoria de filmes deve ser listada;
+- A primeira categoria da lista (que é "Ação") já deve começar como marcada;
+- O header da aplicação possui apenas o nome da categoria selecionada que deve mudar dinamicamente.
 
 A seguir veremos com mais detalhes o que e como precisa ser feito 🚀
 
 ## O que devo editar na aplicação?
 
-Com o template já clonado, as depêndencias instaladas, você deve completar onde não possui código com o código para atingir os objetivos de cada teste. Nesse desafio, você deve editar apenas o seguinte arquivo para completar as funcionalidades da aplicação:
+Com o template já clonado, as dependências instaladas e a fake API rodando, você deve criar **pelo menos** os componentes SideBar e Content que já estão com os arquivos criados.
+Os arquivos a serem editados são:
 
--   [src/components/TaskList.tsx;](https://github.com/rocketseat-education/ignite-template-reactjs-conceitos-do-react/blob/main/src/components/TaskList.tsx)
-
-### components/TaskList.tsx
-
-Esse é o componente responsável por todas as funcionalidades da aplicação, é um componente simples, mas onde botaremos em prática várias partes da manipulação do estado.
-
-Você deve criar as funcionalidades para as três funções presentes nesse arquivo, que são:
-
--   **handleCreateNewTask**: Deve ser possível adicionar uma nova task no estado de `tasks`, com os campos `id` que deve ser gerado de forma aleatória, `title` que deve ser um texto e `isComplete` que deve iniciar como false.
--   **handleToggleTaskCompletion:** Deve alterar o status de `isComplete` para uma task com um ID específico que é recebido por parâmetro.
--   **handleRemoveTask:** Deve receber um ID por parâmetro e remover a task que contém esse ID do estado.
+- **src/App.tsx**
+Esse componente contém toda a aplicação com exceção do componente `Button` que não precisa ser alterado e `Icon` que também não precisa de alteração.
+- **src/components/Content.tsx**
+Esse componente, ainda vazio, deve possuir toda a lógica e corpo responsável pelo header e conteúdo da aplicação (seção contornada em vermelho):
 
 ## Authors
 
